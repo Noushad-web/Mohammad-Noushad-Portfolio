@@ -1,0 +1,247 @@
+// breakpoints for responsive web design
+$xl: 1518px;
+$xl: 1200px;
+$lg: 992px;
+$md: 769px;
+$sm: 576px;
+
+// cursor none for desktop devices
+@media screen and (min-width: $md) {
+  html {
+    cursor: none;
+  }
+}
+
+.span-highlight {
+  background-color: $primary-color;
+  color: $light;
+  padding: 0 5px;
+  border-radius: 10px 0;
+}
+.theme_headline {
+  font-size: 3.7rem;
+  font-weight: 600;
+  text-transform: capitalize;
+
+  @media screen and (max-width: $md) {
+    font-size: 2rem;
+  }
+}
+
+// roman number
+.roman-numbers {
+  font-family: "Quattrocento", serif;
+  font-size: larger;
+  display: block;
+}
+
+// for all buttons on the page
+.btnPage {
+  @extend .anchorBtn;
+  background-color: $light !important;
+  color: $dark !important;
+  box-shadow: 1px 1px 5px #2b2a2a;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  // text-shadow: 0px 0px 2px #72bcd4;
+  font-size: large;
+  padding: 0.8rem 1.6rem;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    background-color: $dark;
+    color: $light !important;
+  }
+
+  &:hover::before {
+    width: 150%;
+    z-index: -1;
+  }
+
+  @media screen and (max-width: $md) {
+    background-color: $primary-color;
+    color: $light;
+    box-shadow: 0px 0px 3px #2b2a2a;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+  }
+}
+
+// -----------------------------------------------------
+
+.anchorBtn {
+  background-color: $light;
+  color: $dark;
+  box-shadow: 0 3px 5px rgba(179, 179, 179, 0.795);
+  box-shadow: 1px 1px 5px #2b2a2a;
+  transition: all 1.3s ease;
+  font-weight: 600;
+  padding: 0.8rem 1.6rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  z-index: 1;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    left: -35px;
+    background-color: $dark;
+    width: 0;
+    height: 100%;
+    top: 0;
+    transform: skewX(50deg);
+    transition: width 0.7s ease;
+    // z-index: 0;
+  }
+
+  &:hover::before {
+    width: 150%;
+    z-index: -1;
+  }
+
+  &:hover {
+    background-color: $dark;
+    color: $light;
+  }
+
+  @media screen and (max-width: $md) {
+    background-color: $light;
+    color: $dark;
+    box-shadow: 0px 0px 3px #2b2a2a;
+    font-weight: 500;
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+  }
+}
+
+@mixin htmlFakeTag {
+  color: $grey;
+  text-transform: lowercase;
+  font-style: italic;
+  font-size: 1rem;
+  font-family: "Kalam", cursive;
+}
+
+.h1Fake {
+  &::before {
+    content: "<h1>";
+    @include htmlFakeTag();
+  }
+  &::after {
+    @include htmlFakeTag();
+    content: "</h1>";
+  }
+}
+
+.htmlFake {
+  &::before {
+    @include htmlFakeTag();
+    content: "<html>";
+  }
+}
+
+.bodyFake {
+  &::before {
+    @include htmlFakeTag();
+    content: "<body>";
+  }
+}
+.htmlFakeClose {
+  &::before {
+    @include htmlFakeTag();
+    content: "</html>";
+  }
+}
+
+.bodyFakeClose {
+  &::before {
+    @include htmlFakeTag();
+    content: "</body>";
+  }
+}
+
+.paraFake {
+  &::before {
+    @include htmlFakeTag();
+    content: "<p>";
+  }
+  &::after {
+    @include htmlFakeTag();
+    content: "</p>";
+  }
+}
+
+.btnFake {
+  &::before {
+    @include htmlFakeTag();
+    content: "<button> ";
+  }
+  &::after {
+    @include htmlFakeTag();
+    content: "</button> ";
+  }
+}
+
+.aFake {
+  &::before {
+    @include htmlFakeTag();
+    content: "<a> ";
+  }
+  &::after {
+    @include htmlFakeTag();
+    content: "</a> ";
+  }
+}
+
+.h4Fake {
+  &::before {
+    @include htmlFakeTag();
+    content: "<h4> ";
+  }
+  &::after {
+    @include htmlFakeTag();
+    content: "</h4> ";
+  }
+}
+
+.h4Fake {
+  &::before {
+    @include htmlFakeTag();
+    content: "<h4> ";
+  }
+  &::after {
+    @include htmlFakeTag();
+    content: "</h4> ";
+  }
+}
+
+.articleFake {
+  &::before {
+    @include htmlFakeTag();
+    content: "<article> ";
+    // margin-left: -.5rem;
+  }
+  &::after {
+    @include htmlFakeTag();
+    content: "</article> ";
+    // margin-left: -.5rem;
+  }
+}
+
+@mixin box-shadow-lg($fade) {
+  box-shadow: 0 0 10px rgba(0, 0, 0, $fade);
+}
+@mixin box-shadow-md($fade) {
+  box-shadow: 0 0 5px rgba(0, 0, 0, $fade);
+}

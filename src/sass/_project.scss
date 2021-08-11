@@ -1,0 +1,55 @@
+.project-section{
+
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+
+    
+    @media screen and (max-width:$md) {
+     padding-top: 2rem;
+     padding-bottom: 3rem;   
+    }
+    #project{
+        padding: 0 2rem 0 58px;
+
+        // only for desktop devices
+        @media screen and (min-width: $md) {
+            .transition{
+                transition : all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+
+            .split_img_wrapper{
+                .left_side_fig{
+                    transform: translateY(-30px);
+                    transition : all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    // will-change: transform;
+                }
+                .right_side_fig{
+                    transform: translateY(30px);
+                    transition : all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    // will-change: transform;
+                }
+
+                &:hover .left_side_fig,&:hover .right_side_fig{
+                    transform: translateY(0px);
+                }           
+            }
+
+        }
+
+        @media screen and (max-width: $md) {
+            padding: 0 0 0 1rem;
+        }
+
+        .project-item {
+            margin-top: 6.5rem;
+            @media screen and (max-width: $md) {
+               margin-top: 4rem;
+            }
+        }
+    
+
+        img{
+            filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+        }
+    }
+}

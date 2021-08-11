@@ -1,0 +1,144 @@
+nav {
+  width: 100%;
+  padding: 0 1rem;
+
+  .navbar_logo {
+    // font-family: "Arizonia", cursive;
+  }
+
+  a {
+    text-decoration: none;
+    color: $primary-color;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    align-self: center;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+
+  @media screen and (min-width: $md) {
+    justify-content: space-between;
+
+    ul {
+      li {
+        margin-left: 2rem;
+
+        .nav_btn {
+          padding: 1rem;
+          font-size: 1.1rem;
+
+          &:hover,
+          &:focus {
+            color: $primary-color;
+            text-shadow: 0px 0px 1px $primary-color;
+          }
+        }
+      }
+    }
+
+    .navbar_logo {
+      font-size: 2rem;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  @media screen and (max-width: $md) {
+    justify-content: space-between;
+    position: relative;
+
+    .navbar_logo {
+      font-size: 2rem;
+    }
+
+
+    ul {
+        padding: 3rem 0;
+        position: absolute;
+        display: flex;
+        gap: 1rem;
+        background-color: $primary-color;
+        place-items: center;
+        left: 100%;
+        width: 0;
+        overflow: hidden;
+        top: 48px;
+        opacity: 0;
+        height: 100vh;
+        flex-direction: column;
+        transition: left .5s ease-in-out, width 1s ease, opacity 1s ease;
+        // will-change: left, width, opacity; 
+
+
+        .nav_li {
+          .nav_btn {
+            color: $light;
+          }
+        }
+    }
+
+    // class to be add for showing the menu
+    .left{
+        left: 0;
+        width: 100vw;
+        opacity: 1;
+
+    }
+    
+
+    .hamburger {
+      position: relative;
+      width: 38px;
+      padding: 0px;
+      right: 10px;
+      cursor: pointer;
+
+      .lines {
+        // top: 10px;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: $primary-color;
+        pointer-events: none;
+        opacity: 1;
+        transition: transform  .3s ease, opacity .3s ease;
+      }
+
+      .lines:nth-of-type(1) {
+        top: 10px;
+      }
+      .lines:nth-of-type(2) {
+        top: 20px;
+        height: 2px !important;
+      }
+      .lines:nth-of-type(3) {
+        top: 30px;
+      }
+    }
+
+   
+    
+  }
+}
+
+
+// lines of hamburger 
+.first{
+  transform: rotate(45deg) translate(10px, 10px);
+}
+.middle{
+  transform: translateX(-50px);
+  opacity: 0 !important;
+}
+.last{
+  transform: translate(-2px, -6px) rotate(-45deg);
+}

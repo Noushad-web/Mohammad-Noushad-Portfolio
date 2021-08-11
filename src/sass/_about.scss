@@ -1,0 +1,93 @@
+.about-section {
+  transition: background-color 2s ease;
+  padding-top: 5rem;
+
+  #about {
+    min-height: 700px;
+    padding-left: 58px;
+    .bg-text-display {
+      color: $dark;
+      // text-shadow: 0px 0px 5px $text-shadow ;
+      text-transform: capitalize;
+      // color: rgb(0, 128, 128);
+    }
+
+    // on big screen
+    .contentAboutWrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "content skills";
+
+      .skillsDiv {
+        grid-area: "skills";
+        // border: 2px solid black;
+
+        .svgElement {
+          max-width: 8rem;
+          height: auto;
+          overflow: visible;
+          stroke: $light;
+          margin: auto;
+          stroke-width: 5;
+          stroke-linejoin: round;
+          stroke-linecap: round;
+
+          svg {
+            max-width: 100%;
+            height: auto;
+            padding: 1rem;
+          }
+        }
+      }
+
+      .aboutMeContent {
+        grid-area: content;
+        width: 70ch;
+        padding-right: 1rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  // on small screen
+  @media screen and (max-width: 768px) {
+    padding: 2.5rem 0;
+
+    #about {
+      min-height: auto;
+      padding: 0 1rem;
+      .contentAboutWrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          " content "
+          " skills ";
+        column-gap: 0.5rem;
+
+        .skillsDiv {
+          .svgElement {
+            max-width: 5rem;
+
+            svg {
+              padding: 0.5rem;
+            }
+          }
+        }
+
+        .aboutMeContent {
+          width: auto;
+          padding: 0;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.aboutSectionDark {
+  background-color: $black;
+  color: $light;
+
+  .theme_headline {
+    color: $light;
+  }
+}

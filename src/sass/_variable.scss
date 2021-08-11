@@ -1,0 +1,32 @@
+// fonts 
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap');
+
+
+$text-shadow : #72bcd4;
+$light:#f5f5f5;
+$grey:grey;
+$dark:#0f1626;
+// $primary-color :#800000;
+$primary-color :$dark;
+$text-color : #1b1d22;
+$text-color-light : #2f333d;
+$black : #0f1626;
+
+// $color : #008080;
+
+
+.custom-light{
+    color: $light;
+}
+.custom-dark{
+    background-color: $dark;
+}
+.custom-grey{
+    color: $light;
+}
+
+
+
