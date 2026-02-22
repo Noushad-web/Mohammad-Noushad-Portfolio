@@ -1,61 +1,54 @@
-// main scss file where we import our all scss 
+// main scss file where we import our all scss
 
-//imports 
-@import './sass/variable';
-@import './sass/utils';
-@import './sass/home';
-@import './sass/cursor';
-@import './sass/navbar';
-@import './sass/loader';
-@import './sass/about';
-@import './sass/project';
-@import './sass/footer';
-
-
-
-
-
-
+//imports
+@import "./sass/variable";
+@import "./sass/utils";
+@import "./sass/home";
+@import "./sass/cursor";
+@import "./sass/navbar";
+@import "./sass/loader";
+@import "./sass/about";
+@import "./sass/project";
+@import "./sass/footer";
 
 //app self styling
-.app{
-    font-family: 'Lato', sans-serif;
-    background-color: $light;
- 
+.app {
+  font-family: "Lato", sans-serif;
+  background-color: $light;
 }
 
-header{
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.home-section{
-    min-height:700px;
-    padding-bottom: 2rem;
-    padding-top: 1rem;
+.home-section {
+  min-height: 700px;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
 
-    @media screen and (max-width:$md) {
-        min-height: auto;
-    }
+  @media screen and (max-width: $md) {
+    min-height: auto;
+  }
 }
 
-.container{
-    @media screen and (min-width:$xl) {
-        max-width: 1440px !important;
-        // margin: 0 auto;
-        // padding: 0 2rem;
-    }
+.container {
+  @media screen and (min-width: $xl) {
+    max-width: 1440px !important;
+    // margin: 0 auto;
+    // padding: 0 2rem;
+  }
 }
 
-.project-section{
-    background-color: $dark;
-    color: $light;
-    // padding-top: 2rem;
+.project-section {
+  background-color: $dark;
+  color: $light;
+  // padding-top: 2rem;
 }
 
-.partition{
-   margin: 0;
+.partition {
+  margin: 0;
 }
 
-// 
+//
 // footer stlye
-// 
+//

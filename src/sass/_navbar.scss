@@ -60,40 +60,39 @@ nav {
       font-size: 2rem;
     }
 
-
     ul {
-        padding: 3rem 0;
-        position: absolute;
-        display: flex;
-        gap: 1rem;
-        background-color: $primary-color;
-        place-items: center;
-        left: 100%;
-        width: 0;
-        overflow: hidden;
-        top: 48px;
-        opacity: 0;
-        height: 100vh;
-        flex-direction: column;
-        transition: left .5s ease-in-out, width 1s ease, opacity 1s ease;
-        // will-change: left, width, opacity; 
+      padding: 3rem 0;
+      position: absolute;
+      display: flex;
+      gap: 1rem;
+      background-color: $primary-color;
+      place-items: center;
+      left: 100%;
+      width: 0;
+      overflow: hidden;
+      top: 48px;
+      opacity: 0;
+      height: 100vh;
+      flex-direction: column;
+      transition:
+        left 0.5s ease-in-out,
+        width 1s ease,
+        opacity 1s ease;
+      // will-change: left, width, opacity;
 
-
-        .nav_li {
-          .nav_btn {
-            color: $light;
-          }
+      .nav_li {
+        .nav_btn {
+          color: $light;
         }
+      }
     }
 
     // class to be add for showing the menu
-    .left{
-        left: 0;
-        width: 100vw;
-        opacity: 1;
-
+    .left {
+      left: 0;
+      width: 100vw;
+      opacity: 1;
     }
-    
 
     .hamburger {
       position: relative;
@@ -110,7 +109,9 @@ nav {
         background-color: $primary-color;
         pointer-events: none;
         opacity: 1;
-        transition: transform  .3s ease, opacity .3s ease;
+        transition:
+          transform 0.3s ease,
+          opacity 0.3s ease;
       }
 
       .lines:nth-of-type(1) {
@@ -124,21 +125,17 @@ nav {
         top: 30px;
       }
     }
-
-   
-    
   }
 }
 
-
-// lines of hamburger 
-.first{
+// lines of hamburger
+.first {
   transform: rotate(45deg) translate(10px, 10px);
 }
-.middle{
+.middle {
   transform: translateX(-50px);
   opacity: 0 !important;
 }
-.last{
+.last {
   transform: translate(-2px, -6px) rotate(-45deg);
 }
