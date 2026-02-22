@@ -1,10 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-const Sass = ({icon}) => {
-
-
-  
+const Sass = ({ icon }) => {
   // const icon = {
 
   //   hidden: {
